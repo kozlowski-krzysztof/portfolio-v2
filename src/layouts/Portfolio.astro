@@ -1,0 +1,257 @@
+---
+import arrow from "../assets/arrow.svg";
+import Header from "../components/Header.astro";
+import LinkButton from "../components/LinkButton.astro";
+import Typescript from "../assets/typescript.svg";
+import React from "../assets/react.svg";
+import Android from "../assets/android2.svg";
+import Java from "../assets/java2.svg";
+import Python from "../assets/python.svg";
+import Cpp from "../assets/cpp.svg";
+import Linux from "../assets/linux1.svg";
+import Csharp from "../assets/csharp.svg";
+import Docker from "../assets/docker1.svg";
+import Git from "../assets/git.svg";
+import SQL from "../assets/sql.svg";
+import Cloudflare from "../assets/cloudflare.svg";
+import "lenis/dist/lenis.css";
+---
+
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        background-color: var(--bg2);
+
+        width: 100dvw;
+    }
+
+    .height {
+        height: 5000px;
+    }
+
+    .sticky {
+        position: sticky;
+        top: 0;
+        overflow-x: hidden;
+    }
+
+    h1,
+    article {
+        margin: 0.5rem;
+    }
+
+    main {
+        display: block;
+        margin: 0 auto;
+        max-width: 65ch;
+        text-align: center;
+    }
+
+    button {
+        border-style: none;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    article {
+        text-wrap: balance;
+    }
+
+    .button-container {
+        margin: 3rem auto 5rem auto;
+    }
+
+    svg {
+        max-width: 100%;
+        mask-image: linear-gradient(to top, black 10%, transparent 100%);
+    }
+
+    ul {
+        width: max-content;
+    }
+
+    .scroll-wrapper {
+        /* transform: translateX(-300%); */
+    }
+
+    li {
+        display: grid;
+        background-color: var(--bg1);
+        border-radius: 1rem;
+        padding: 1rem 1.5rem;
+        margin: 1rem;
+        width: 20rem;
+        height: 20rem;
+        overflow: hidden;
+
+        :last-child {
+            z-index: 0;
+            align-self: end;
+        }
+
+        > * {
+            z-index: 1;
+            grid-area: 1/1;
+        }
+    }
+</style>
+
+<script>
+    import { initTheme } from "../components/ThemeSwitcher/ThemeUtil";
+    import Lenis from "lenis";
+    initTheme();
+
+    // Initialize Lenis
+    const lenis = new Lenis({
+        // duration: 0.3, // scroll animation duration
+        // easing: (t) => t, // linear, ease, etc.
+        autoRaf: true,
+    });
+
+    // Listen for the scroll event and log the event data
+    lenis.on("scroll", (e) => {});
+
+    import { onScroll, createTimeline } from "animejs";
+    createTimeline({
+        defaults: {
+            ease: "linear",
+            duration: 500,
+            composition: "blend",
+        },
+        autoplay: onScroll({
+            target: ".height",
+            enter: "top top",
+            leave: "bottom bottom",
+            sync: 0.5,
+            debug: true,
+        }),
+    })
+        .add(
+            ".this",
+            {
+                translateX: ["0%", "-75%"],
+            },
+            0,
+        )
+        .init();
+</script>
+
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <div class="height">
+            <div class="sticky">
+                <main class="">
+                    <Header />
+                    <h1>Hi, I'm Krzysztof Kozlowski</h1>
+                    <article class="">
+                        a 3rd year student at Linköpings University. I current
+                        enjoy fullstack web development but I've also tried
+                        low-level and game development. In my free time I like
+                        to experiment with new tech and computers. Recently I've
+                        built a server which I'm quite proud of and I managed to
+                        snagg a 128GB ram kit right before the AI price spike.
+                    </article>
+                    <div class="button-container">
+                        <LinkButton href="public/CV-krzysztof-kozlowski-en.pdf">
+                            Resume
+                        </LinkButton>
+                        <LinkButton href="projects"> Projects </LinkButton>
+                    </div>
+                    <h2>Stuff I know</h2>
+                </main>
+                <div class="scroll-wrapper">
+                    <ul class="flex-row this">
+                        <li>
+                            <div>
+                                <h2>Typescript</h2>
+                            </div>
+                            <Typescript width="auto" height="auto" />
+                        </li>
+                        <li>
+                            <div>
+                                <h2>React</h2>
+                            </div>
+                            <React width="auto" height="auto" />
+                        </li>
+                        <li>
+                            <div>
+                                <h2>React Native</h2>
+                            </div>
+                            <React width="auto" height="auto" />
+                        </li>
+                        <li>
+                            <div>
+                                <h2>Android</h2>
+                            </div>
+                            <Android width="auto" height="auto" />
+                        </li>
+                        <li>
+                            <div>
+                                <h2>Java</h2>
+                            </div>
+                            <Java width="auto" height="auto" />
+                        </li>
+                        <li>
+                            <div>
+                                <h2>C++</h2>
+                            </div>
+                            <Cpp width="auto" height="auto" />
+                        </li>
+                        <li>
+                            <div>
+                                <h2>Python</h2>
+                            </div>
+                            <Python width="auto" height="auto" />
+                        </li>
+                        <li>
+                            <div>
+                                <h2>C#</h2>
+                            </div>
+                            <Csharp width="auto" height="auto" />
+                        </li>
+                        <li>
+                            <div>
+                                <h2>Docker</h2>
+                            </div>
+                            <Docker width="auto" height="auto" />
+                        </li>
+                        <li>
+                            <div>
+                                <h2>Git</h2>
+                            </div>
+                            <Git width="auto" height="auto" />
+                        </li>
+                        <li>
+                            <div>
+                                <h2>SQL</h2>
+                            </div>
+                            <SQL width="auto" height="auto" />
+                        </li>
+                        <li>
+                            <div>
+                                <h2>Linux</h2>
+                            </div>
+                            <Linux width="auto" height="auto" />
+                        </li>
+                        <li>
+                            <div>
+                                <h2>Cloudflare</h2>
+                            </div>
+                            <Cloudflare width="auto" height="auto" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

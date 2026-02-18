@@ -1,0 +1,3 @@
+.svg-invert {
+	filter: var(--svg-filter);
+}

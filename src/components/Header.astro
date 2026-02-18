@@ -1,0 +1,45 @@
+---
+import Github from "../assets/github/GitHub_Invertocat_Black.svg";
+import LinkedIn from "../assets/linkedin/linkedin2.svg";
+import ThemeSwitcher from "./ThemeSwitcher/ThemeSwitcher";
+import LanguageSelector from "./LanguagePicker/LanguageSelector.astro";
+import LanguageOption from "./LanguagePicker/LanguageOption.astro";
+---
+
+<style>
+    header {
+        padding: 1rem;
+        height: 4rem;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .socials,
+    .options {
+        display: inline-flex;
+        gap: 1rem;
+    }
+
+    svg {
+        height: 100%;
+    }
+</style>
+
+<header>
+    <div class="socials">
+        <a href="https://www.linkedin.com/in/krzysztof-kozlowski-4101472b7/">
+            <LinkedIn width="auto" height="auto" />
+        </a>
+        <a href="https://github.com/kozlowski-krzysztof">
+            <Github class="svg-invert" width="auto" height="auto" />
+        </a>
+    </div>
+
+    <div class="options">
+        <LanguageSelector>
+            <LanguageOption lang="sv" />
+            <LanguageOption lang="en" />
+        </LanguageSelector>
+        <ThemeSwitcher client:idle />
+    </div>
+</header>

@@ -1,0 +1,80 @@
+---
+import "../styles/colors.css";
+---
+
+<script></script>
+
+<style>
+    html {
+        display: grid;
+        place-items: center;
+        background-color: antiquewhite;
+    }
+
+    div {
+        width: 100px;
+        height: 100px;
+    }
+
+    section {
+        display: flex;
+
+        :nth-child(1) {
+            background-color: var(--bg1);
+        }
+        :nth-child(2) {
+            background-color: var(--bg2);
+        }
+        :nth-child(3) {
+            background-color: var(--bg3);
+        }
+        :nth-child(4) {
+            background-color: var(--bg4);
+        }
+        :nth-child(5) {
+            background-color: var(--bg5);
+        }
+        :nth-child(6) {
+            background-color: var(--bg6);
+        }
+    }
+
+    .dark {
+        color-scheme: dark;
+    }
+
+    .light {
+        color-scheme: light;
+    }
+</style>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Colors</title>
+    </head>
+    <body>
+        <h1>Dark mode</h1>
+        <section class="dark">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <h1>Light mode</h1>
+        <section class="light">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </body>
+</html>
