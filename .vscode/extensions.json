@@ -1,4 +1,8 @@
 {
-  "recommendations": ["astro-build.astro-vscode"],
-  "unwantedRecommendations": []
+	"recommendations": [
+		"ms-vscode-remote.vscode-remote-extensionpack",
+		"astro-build.astro-vscode",
+		"biomejs.biome"
+	],
+	"unwantedRecommendations": []
 }
