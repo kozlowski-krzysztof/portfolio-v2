@@ -1,46 +1,51 @@
-# Astro Starter Kit: Basics
+# Portfolio v2 for Krzysztof Kozlowski
 
-```sh
-npm create astro@latest -- --template basics
+You can access the site on [krzysztof.se](https://krzysztof.se).
+
+If that page hosts a newer verison of the portfolio you can probably still access it by specifying the subdomain [v2.krzysztof.se](https://v2.krzysztof.se). 
+
+> Preview of the portfolio:
+
+![preview of the portfolio](preview.jpg)
+
+## Tech and choices
+
+| Tech/Package   | Description | Reason |
+| -------------- | ----------- | ------ |
+| [Astro](https://astro.build/) 
+| [LenisJS](https://lenis.darkroom.engineering/) 
+| [AnimeJS](https://animejs.com/) 
+
+
+
+## How to install and run
+
+The easiest way to get the project running is with method 1 but this does not the developer tooling. Method 2 uses devcontainers with vscode which containerizes the application and also installs all developer extensions automatically. 
+
+>Method 2 is recommended if you dont want to polute your regular vscode with extensions only needed for this project. 
+
+### Method 1
+
+1. Clone the project.
+2. Open a terminal in the project root and run the command below.
+
+```bash 
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Method 2
 
-## 🚀 Project Structure
+1. Clone the project and open it with vscode
+2. Follow [this](https://code.visualstudio.com/docs/devcontainers/tutorial) tutorial on how to install docker devcontainers in vscode. If you already have docker installed on your system you should only have to go into the extensions tab and install the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
+3. Open the project in the devcontainer. The devcontainer should now have installed every extension and dependency thats needed.
+4. Open a terminal in the project root and run the first command below to start a localhost instance or the second command below to see all runnable options.
 
-Inside of your Astro project, you'll see the following folders and files:
+> FIX NOT CORRECT BECAUSE DOCKER NETWORK ISSUES
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```bash 
+npm run dev
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash 
+npm run
+```
