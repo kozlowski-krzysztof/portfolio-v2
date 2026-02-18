@@ -1,0 +1,17 @@
+@property --theme-angle {
+	syntax: "<angle>";
+	inherits: true;
+	initial-value: 0turn;
+}
+
+html[data-theme="light"] {
+	--theme-angle: 0turn;
+	--svg-filter: invert(0);
+	color-scheme: light;
+}
+
+html[data-theme="dark"] {
+	--theme-angle: 0.5turn;
+	--svg-filter: invert(1);
+	color-scheme: dark;
+}

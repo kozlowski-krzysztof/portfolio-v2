@@ -1,0 +1,25 @@
+.style {
+	display: grid;
+	perspective: 400px;
+	height: 0px;
+
+	> * {
+		backface-visibility: hidden;
+		grid-area: 1 / 1;
+	}
+
+	button,
+	img {
+		aspect-ratio: 1 / 1;
+	}
+}
+
+.light {
+	transition: all ease-in-out 0.5s;
+	transform: rotateY(var(--theme-angle));
+}
+
+.dark {
+	transition: all ease-in-out 0.5s;
+	transform: rotateY(calc(var(--theme-angle) + 0.5turn));
+}
